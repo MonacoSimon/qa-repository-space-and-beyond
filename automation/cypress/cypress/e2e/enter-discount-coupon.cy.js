@@ -1,0 +1,15 @@
+describe('template spec', () => {
+  it('passes', () => {
+    cy.visit('https://demo.testim.io/')
+    cy.get(':nth-child(2) > .theme__cardActions___1aHjq > .theme__button___1iKuo').click()
+    cy.get('form > :nth-child(1) > .theme__inputElement___27dyY').type('Simon')
+    cy.get('form > :nth-child(2) > .theme__inputElement___27dyY').type('as@as.com')
+    cy.get(':nth-child(3) > .theme__inputElement___27dyY').type('123-45-6789')
+    cy.get(':nth-child(4) > .theme__inputElement___27dyY').type('+34 612 345 678')
+    const precioAntes= cy.get('.OrderSummary__headline-1___1lzsL')
+    cy.get('[name="promo"]').type('TESTIM')
+    cy.get('.flexboxgrid__col-xs-5___1HkK5 > .theme__button___1iKuo').click()
+    const despues = cy.get('.OrderSummary__headline-1___1lzsL')
+    precioAntes.should('not.equal',despues)
+  })
+})

@@ -1,0 +1,17 @@
+describe('template spec', () => {
+  it('passes', () => {
+    cy.visit('https://demo.testim.io/')
+    cy.get(':nth-child(1) > [data-react-toolbox="date-picker"] > .theme__input___qUQeP > .theme__inputElement___27dyY').click()
+    cy.get('.theme__active___2k63V > span').click()
+    cy.get('.theme__navigation___3eiS- > :nth-child(2)').click()
+    cy.get('.Hero__form-box___126DY > :nth-child(3) > .theme__input___qUQeP > .theme__inputElement___27dyY').click()
+    cy.get('.theme__active___31xyK > .theme__values___1jS4g > :nth-child(3)').click()
+    cy.get(':nth-child(4) > .theme__input___qUQeP > .theme__inputElement___27dyY').click()
+    cy.get('.theme__active___31xyK > .theme__values___1jS4g > :nth-child(5)').click()
+    cy.get(':nth-child(1) > .theme__input___qUQeP > .theme__inputElement___27dyY').click()
+    cy.get('.theme__active___31xyK > .theme__values___1jS4g > :nth-child(6)').click()
+    cy.get('.Gallery__filters-box___1z3SX > :nth-child(2) > .theme__input___qUQeP > .theme__inputElement___27dyY').click()
+    cy.get('.theme__active___31xyK > .theme__values___1jS4g > :nth-child(3)').click()
+    cy.get('.theme__title___35Wsy').should('be.visible')
+  })
+})
