@@ -181,3 +181,24 @@ Configurar la variable baseUrl con:
 
 https://demo.testim.io
 Ejecutar los requests o la colección
+
+## Dependencias locales
+
+Este proyecto requiere instalación manual de:
+
+- Node.js
+- npm
+- Java
+- JMeter
+- OWASP ZAP
+- Newman
+- Lighthouse
+
+para verificar la instalación correr el script set-up.sh.
+
+```bash
+chmod +x set-up.sh
+./set-up.sh
+```
+
+
