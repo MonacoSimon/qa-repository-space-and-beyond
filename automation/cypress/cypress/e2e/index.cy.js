@@ -1,6 +1,11 @@
+import HomePage from '../pages/HomePage'
+
+
 describe('template spec', () => {
+  const homePage = new HomePage();
+
   it('passes', () => {
-    cy.visit('https://demo.testim.io/')
+    homePage.visit();
     cy.get('.Hero__headline-1___3C6vA').should('be.visible')
   })
 })
